@@ -1,0 +1,12 @@
+{% extends 'checkmate/base.html' %}
+{% block main_content %}
+<h2>Disease Count</h2>
+<br>
+<ul>
+    {% for item in Results %}
+    <li> <b>{{item.Gender}} - {{item.Diseases}} - {{ item.Patients}} votes</b></li>
+    {% endfor %}
+</ul>
+<br>
+<a href="/checkmate" class="btn btn-success" >Vote Again</a>
+{% endblock %}
